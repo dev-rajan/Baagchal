@@ -1,0 +1,71 @@
+.bags-section {
+    background-image: url('../../images/chestsectionnew1.png');
+    height: auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        background-image: linear-gradient(180deg, rgba(20, 24, 41, 0) 0%, #141829 30.45%, rgba(20, 24, 41, 0.97) 53.82%, rgba(20, 24, 41, 0) 97.48%);
+        height: 25em;
+        top: -7.62em;
+        left: 0;
+        width: 100%;
+    }
+
+    &::after {
+        content: '';
+        background-image: linear-gradient(180deg, rgba(20, 24, 41, 0) 84%, rgba(20, 24, 41, 0.85) 100%, #141829 100%);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 39.6em;
+    }
+
+    .contents {
+        z-index: 1;
+        width: 100%;
+
+        .heading {
+            font-size: 1.625em;
+            line-height: 0.438em;
+            color: #F35629;
+            font-weight: 400;
+        }
+
+        .title {
+
+            span {
+                font-family: $imported-font-family;
+                font-size: 4.12em;
+                color: $white;
+            }
+        }
+
+        .bags{
+            margin: 8em 0;
+        }
+
+        .buy-btn{
+            figure{
+                img{
+                    width: 300px;
+                }
+            }
+        }
+
+        .btn {
+            font-size: 1.5em;
+            background-image: $bg-color;
+            color: $white;
+            font-weight: 600;
+            padding: 0.5em 4em;
+        }
+    }
+
+}

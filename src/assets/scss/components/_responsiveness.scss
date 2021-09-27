@@ -1,0 +1,124 @@
+@import "../abstracts/mixins";
+
+@include max-break-point(tablet) {
+    .hero-section {
+        .contents {
+            width: 100%;
+
+            .title {
+                span {
+
+                    font-size: 3.12em;
+                }
+            }
+        }
+    }
+
+    .history-section {
+
+        // height: auto !important;
+        .contents {
+            .title {
+                span {
+                    font-size: 3.12em !important;
+                }
+            }
+        }
+    }
+
+    .work-section {
+        height: auto !important;
+
+        .contents {
+            .heading{
+                margin-bottom: 0.8em;
+            }
+            .title {
+                span {
+                    font-size: 3.12em !important;
+                    line-height: 3.5rem !important;
+                }
+            }
+
+            .grid {
+                display: block !important;
+
+                .grid-item {
+                    margin-top: 1em;
+                }
+            }
+        }
+    }
+
+    .characters-section {
+        .contents {
+            .heading{
+                margin-bottom: 0.8em;
+            }
+            .title {
+                span {
+                    font-size: 3.12em !important;
+                    line-height: 3.5rem !important;
+                }
+            }
+        }
+    }
+
+    .bags-section {
+        .contents {
+            .heading{
+                margin-bottom: 0.8em;
+            }
+            .title {
+                span {
+                    font-size: 3.12em !important;
+                    line-height: 3.5rem !important;
+                }
+            }
+        }
+    }
+
+    .discover-section {
+        .contents {
+            .heading{
+                margin-bottom: 0.8em;
+            }
+            .title {
+                span {
+                    font-size: 3.12em !important;
+                    line-height: 3.5rem !important;
+                }
+            }
+        }
+    }
+
+    .characters-section .contents .active.center {
+        margin: 0 !important;
+    }
+
+    .characters-section .contents .item .image img{
+        object-fit: contain !important;
+    }
+
+    .footer {
+        .wrapper {
+            width: 100%;
+        }
+    }
+}
+
+@include max-break-point(wide-screen) {
+    .history-section {
+        .contents {
+            width: 100% !important;
+        }
+    }
+}
+
+@include max-break-point(large-desktop) {
+    .footer {
+        .wrapper {
+            width: 65%;
+        }
+    }
+}

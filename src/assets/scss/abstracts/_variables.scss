@@ -1,0 +1,59 @@
+$primary-color: #82899b;
+$secondary-color: #315efb;
+$title: #1f2431;
+$text-color: #777d94;
+$brown: #c4c4c4;
+$card-color: #fafcff;
+$warning: #e8d000;
+$border: #eeeeff;
+$grey: #d8deec;
+$tertiary-color: rgba(49, 94, 251, 0.03);
+$senary-color: #eeeeee;
+$dark-grey: #979797;
+$quaternary-color: #828ba4;
+$border-color: #8ba0eb;
+$light-grey: #bdbdbd;
+$light-second-grey: #d8deec;
+$primary-box-shadow: rgba(0, 0, 0, 0.075);
+$secondary-box-shadow: rgba(4, 17, 29, 0.25);
+$gray: #141829;
+
+$skeleton-background: #eeeeee;
+$skeleton-wrapper: #fafcff;
+$skeleton-animation-color: rgba(248, 245, 245, 0.2);
+
+$primary-color-dark: #d21b59;
+$black-overlay: rgba(0, 0, 0, 0.5);
+$dark-overlay: rgba(0, 0, 0, 0.7);
+$primary-overlay: rgba(0, 0, 0, 0.32);
+$secondary-overlay: rgba(0, 0, 0, 0.8);
+$border-radius: 0.8em;
+// $text-color: #646464;
+$text-color-dark: #484848;
+$text-color-light: #a5a5a5;
+$light-gray: #f5f5f5;
+$white: #ffffff;
+$black: #000000;
+$dollar-color: #7bb661;
+
+$bg-color: linear-gradient(270.35deg, #F35727 3.9%, #FD8864 97.35%);
+
+$theme-colors: ("green": #47bf2d,
+  "secondary": #315efb,
+  "warning": #e8d000,
+  "danger": #eb5757,
+  "success": #068385,
+  "primary": #82899b,
+  "orange": #ffa753,
+  "purple": #7997ff,
+);
+
+//Fonts
+$default-font-family: "Glory",
+sans-serif;
+$title-font-family: "Glory",
+sans-serif;
+$sub-title-font-family: "Glory",
+sans-serif;
+$imported-font-family: "evil-empire-Regular",
+sans-serif;

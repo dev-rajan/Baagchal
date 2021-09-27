@@ -1,0 +1,42 @@
+.hero-section {
+    background-image: url('../../images/Bagchaal1.png');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+
+    .contents {
+        background-image: url('../../images/Bagchaal2.png');
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: auto;
+        width: 100%;
+        margin: auto auto;
+
+        .wrapper {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0%);
+
+            .logo {
+                font-family: $imported-font-family;
+                font-size: 3.6em;
+                background: $bg-color;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .title {
+                span {
+                    font-family: $imported-font-family;
+                    font-size: 4.12em;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+}

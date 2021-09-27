@@ -1,0 +1,151 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+main {
+  padding-top: 5.2em;
+
+  @include min-break-point(tablet-landscape) {
+    padding-top: 6.5em;
+  }
+}
+
+hr {
+  border-color: #f4f4f4;
+
+  &.dark {
+    border-color: #e8e8e8;
+  }
+}
+
+.light-bg {
+  background-color: $light-gray;
+}
+
+.bold-text {
+  font-weight: 600;
+}
+
+.extra-bold-text {
+  font-weight: bold;
+}
+
+.text-color {
+  color: $text-color;
+}
+
+.dark-text-color {
+  color: $text-color-dark;
+}
+
+.mt-default {
+  margin-top: 1.5em;
+}
+
+.light-shadow {
+  box-shadow: 0.01em 0.1em 0.1em rgba(0, 0, 0, 0.08);
+}
+
+.heading {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: $text-color-dark;
+
+  span,
+  a {
+    font-size: 0.9em;
+    color: $text-color-light;
+  }
+}
+
+p {
+  color: $text-color;
+  font-size: 1.375em;
+  line-height: 1.4em;
+  margin: 0;
+}
+
+.description {
+  color: $text-color;
+  font-size: 1.375em;
+  line-height: 1.4em;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+.overlay {
+  background-color: $black-overlay;
+  @include position(absolute, 0, 0, 0, 0);
+  height: 100%;
+  width: 100%;
+  border-radius: $border-radius;
+}
+
+.overlay-dark {
+  background-color: $dark-overlay;
+  @include position(absolute, 0, 0, 0, 0);
+  height: 100%;
+  width: 100%;
+  border-radius: $border-radius;
+}
+
+.overlay-gradient {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(255, 255, 255, 0) 100%);
+
+  @include position(absolute, 0, 0, 0, 0);
+  height: 100%;
+  width: 100%;
+  border-radius: $border-radius;
+}
+
+.primary-color,
+.primary-link {
+  color: $primary-color;
+}
+
+.primary-link {
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.stroke-icon {
+  path {
+    stroke: $primary-color;
+    -webkit-text-stroke: $primary-color;
+    stroke-width: 0.25em;
+    color: transparent;
+  }
+}
+
+.form-group {
+  input {
+    @include border-radius($border-radius);
+  }
+}
+
+.section-heading {
+  .main-heading {
+    font-weight: bold;
+    color: $text-color-dark;
+  }
+
+  .sub-heading {
+    color: $text-color-light;
+  }
+}
+
+.arrow {
+  font-size: 35px;
+}

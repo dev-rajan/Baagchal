@@ -1,0 +1,71 @@
+.discover-section {
+    background-color: $gray;
+    text-align: center;
+    display: flex;
+    padding: 5em 0;
+
+    .contents {
+        width: 100%;
+
+        .heading {
+            font-size: 1.625em;
+            line-height: 0.438em;
+            color: #F35629;
+            font-weight: 400;
+        }
+
+        .title {
+
+            span {
+                font-family: $imported-font-family;
+                font-size: 4.12em;
+                color: $white;
+            }
+        }
+
+        .news {
+            text-align: left;
+
+            .image {
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-image: linear-gradient(180deg, rgba(31, 36, 61, 0) 0%, #050E1F 79.8%);
+                }
+
+                figure>div {
+                    display: block !important;
+                }
+
+                img {
+                    width: 100%;
+                    border-radius: 4px;
+                }
+
+                .news-title {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    padding: 1em;
+                    z-index: 1;
+
+                    span {
+                        font-size: 1.25em;
+                        line-height: 1.375em;
+                        color: $white;
+                    }
+                }
+            }
+
+        }
+    }
+
+
+}

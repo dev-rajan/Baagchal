@@ -1,0 +1,144 @@
+.characters-section {
+    background-color: $gray;
+    text-align: center;
+    display: flex;
+    height: 58em;
+    padding-top: 5em;
+    padding-bottom: 7em;
+
+    .contents {
+        width: 100%;
+
+        .wrapper {
+            .owl-stage {
+                padding: 5em 0 2em 0;
+            }
+        }
+
+        .heading {
+            font-size: 1.625em;
+            line-height: 0.438em;
+            color: #F35629;
+            font-weight: 400;
+        }
+
+        .title {
+
+            span {
+                font-family: $imported-font-family;
+                font-size: 4.12em;
+                color: $white;
+            }
+        }
+
+        .item {
+
+            .image {
+                background-image: url('../../images/border1.png');
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: contain;
+                padding: 1em;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    background-color: #141829ad;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    border-radius: 12px;
+                    z-index: 2;
+                }
+
+                img {
+                    width: 166px;
+                    height: 244px;
+                    object-fit: cover;
+                }
+
+            }
+
+            .player-info {
+                opacity: 0;
+                transition: 0.2s ease;
+                margin-top: 1em;
+
+                .player-name {
+                    span {
+                        font-family: $imported-font-family;
+                        font-size: 2.25em;
+                        color: $white;
+                    }
+                }
+
+                .player-type {
+                    font-size: 1.625em;
+                    color: #F35629;
+                }
+            }
+
+            &:hover {
+                .player-info {
+                    opacity: 1;
+                }
+            }
+
+
+
+        }
+
+        .active.center {
+            margin: 0 1em;
+
+            .item {
+                -webkit-transform: scale(1.2);
+                transform: scale(1.2);
+
+                .image {
+                    background-image: url('../../images/border.png');
+
+                    &::before{
+                        background-color: transparent;
+                    }
+
+                    figure > div{
+                        position: initial !important;
+                        overflow: visible !important;
+                    }
+
+                    img {
+                        width: 166px;
+                        height: 244px;
+                        object-fit: cover;
+                    }
+
+                }
+
+                .player-info {
+                    opacity: 1;
+                    margin-top: 1em;
+
+                    .player-name {
+                        span {
+                            font-family: $imported-font-family;
+                            font-size: 2.25em;
+                            color: $white;
+                        }
+                    }
+
+                    .player-type {
+                        font-size: 1.625em;
+                        color: #F35629;
+                    }
+                }
+
+            }
+        }
+
+    }
+
+
+}

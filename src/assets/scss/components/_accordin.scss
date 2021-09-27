@@ -1,0 +1,26 @@
+.accordion-item{
+    background-color: $gray;
+    border: none;
+}
+
+.accordion-button{
+    background-color: $gray;
+    color: $white;
+    font-size: 22px;
+}
+
+.accordion-button:focus{
+    border: none;
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed){
+    color: #F35728;
+    background-color: $gray;
+}
+
+.accordion-body{
+    font-size: 16px;
+   color: #7D85A6;
+    ;
+}
