@@ -68,7 +68,7 @@ const Items = {
 export const Icons = ({ className, url, title }) => {
   return (
     <li>
-      <a className={className} href={url} title={title} target="_blank">
+      <a className={className} href={url} title={title} target="_blank" rel="noreferrer">
         <FontAwesomeIcon icon={title} />
       </a>
     </li>
