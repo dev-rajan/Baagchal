@@ -6,9 +6,64 @@
         font-family: "evil-empire-Regular", sans-serif;
         font-size: 4.12em;
         letter-spacing: 4px;
-        color: #ffffff;
-        margin: 1em 0;
+        color: $white;
+        padding: 1em 0;
+        margin: 0;
     }
 
 
+
+    .questions {
+        padding-bottom: 4em;
+
+        .accordion-item {
+            background-color: $gray !important;
+            border: none;
+            margin-top: 2em;
+
+            .accordion-title {
+                cursor: pointer;
+
+                &:hover .question,
+                &:hover .symbol {
+                    color: #F35728 !important;
+                }
+
+                .question {
+                    background-color: $gray;
+                    color: $white;
+                    font-size: 22px;
+                    transition: 0.2s ease;
+                }
+
+                .symbol {
+                    font-size: 2em;
+                    line-height: 36px;
+                    transition: 0.2s ease;
+                }
+            }
+
+            .active {
+
+                .question,
+                .symbol {
+                    color: #F35728 !important;
+                }
+            }
+
+            .accordion-content {
+                font-size: 16px;
+                color: #7D85A6;
+                background-color: $gray;
+                margin-top: 1em;
+                max-height: 0;
+                overflow: hidden;
+                transition: all 0.4s;
+            }
+
+            .visible {
+                max-height: 100vh;
+            }
+        }
+    }
 }

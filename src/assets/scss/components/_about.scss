@@ -1,0 +1,114 @@
+.about {
+    .about-hero {
+        background-image: url('../../images/about.png');
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
+        text-align: center;
+        display: flex;
+        position: relative;
+
+        &::after {
+            content: '';
+            background-image: linear-gradient(180deg, rgba(20, 24, 41, 0.5) 100%, rgba(20, 24, 41, 0.85) 50%, #141829 67%);
+            position: absolute;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+
+        .contents {
+            width: 55%;
+            z-index: 1;
+            margin: 0 auto;
+
+            .title {
+                span {
+                    font-family: $imported-font-family;
+                    font-size: 4.12em;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    .roadmap {
+        background-color: $gray;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            background-image: linear-gradient(180deg, rgba(20, 24, 41, 0) 0%, #141829 37.05%, #141829 55.34%, #141829 71.08%, rgba(20, 24, 41, 0) 97.48%);
+            height: 10em;
+            top: -6em;
+            left: 0;
+            width: 100%;
+        }
+
+        .wrapper {
+            padding-top: 4em;
+
+            .title {
+                span {
+                    font-family: $imported-font-family;
+                    font-size: 4.12em;
+                    color: $white;
+                }
+            }
+
+            .tasks {
+                margin-top: 6em;
+                padding-bottom: 6em;
+
+                .heading {
+                    font-family: $imported-font-family;
+                    font-size: 1.5em;
+                    color: $white;
+                }
+
+                ul {
+                    li {
+                        font-size: 1.12em;
+                        color: #777D94;
+                    }
+                }
+
+                .row {
+                    margin-top: 3em;
+
+                    .right {
+                        .box {
+                            figure {
+                                margin-right: 3em;
+                            }
+                        }
+                    }
+                }
+
+                .row:nth-child(2n) {
+
+                    .left {
+                        order: 1;
+                    }
+
+                    .right {
+                        .box {
+                            justify-content: flex-end;
+
+                            figure {
+                                order: 1;
+                                margin-left: 3em;
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

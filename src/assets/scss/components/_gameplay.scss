@@ -1,0 +1,114 @@
+.gameplay {
+    .gameplay-hero {
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
+        text-align: center;
+        display: flex;
+        position: relative;
+
+        .bg-img {
+            background-image: url('../../images/gameplay.png');
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: cover;
+            text-align: center;
+            display: flex;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+
+        }
+
+        &::before {
+            content: '';
+            background-color: rgba(11, 17, 38, 0.6);
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            z-index: 3;
+        }
+
+        &::after {
+            content: '';
+            background-color: rgb(70, 76, 99);
+            mix-blend-mode: color;
+            position: absolute;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 2;
+        }
+
+        .contents {
+            width: 55%;
+            z-index: 4;
+            margin: 0 auto;
+
+            .heading span {
+                font-size: 1.625em;
+                line-height: 0.438em;
+                color: #F35629;
+                font-weight: 400;
+            }
+
+            .title {
+                span {
+                    font-family: $imported-font-family;
+                    font-size: 4.12em;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    .instruction {
+        background-image: url('../../images/MeettheCharacter1.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: auto;
+        background-size: cover;
+        display: flex;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            background-image: linear-gradient(180deg, rgba(20, 24, 41, 0) 0%, #141829 37.05%, #141829 55.34%, #141829 71.08%, rgba(20, 24, 41, 0) 97.48%);
+            height: 10em;
+            top: -6em;
+            left: 0;
+            width: 100%;
+            z-index: 3;
+        }
+
+        .wrapper {
+
+            .title {
+                span {
+                    font-family: $imported-font-family;
+                    font-size: 4.12em;
+                    color: $white;
+                }
+            }
+
+            .tasks {
+                padding-bottom: 6em;
+
+                .row{
+                    margin-top: 17em;
+                }
+            }
+        }
+
+    }
+}

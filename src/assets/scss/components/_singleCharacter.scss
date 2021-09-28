@@ -1,0 +1,31 @@
+.character {
+    background-color: #141829;
+    padding: 8em 0;
+
+    .image {
+        img {
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .wrapper {
+        .title {
+
+            span {
+                font-family: $imported-font-family;
+                font-size: 4.12em;
+                color: $white;
+            }
+        }
+
+        .type {
+            span {
+                font-size: 1.625em;
+                line-height: 0.438em;
+                color: #F35629;
+                font-weight: 400;
+            }
+        }
+    }
+}

@@ -44,7 +44,7 @@ const Header = ({ logo = "Baagchal" }) => {
             <a className="navbar-brand text-uppercase">{logo}</a>
           </Link>
 
-          <button className="btn text-light d-md-none" id="show" onClick={handleClick}>
+          <button className="btn text-light d-lg-none" id="show" onClick={handleClick}>
             <FontAwesomeIcon icon={faBars} size="2x" />
           </button>
 

@@ -5,13 +5,18 @@ import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import { faTelegramPlane } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
 
 const Footer = ({ logo = "Baagchal" }) => {
   return (
     <footer className="footer">
       <div className="container text-center">
         <div className="wrapper">
-          <h2 className="logo text-uppercase">{logo}</h2>
+          <Link href="/">
+            <a>
+              <h2 className="logo text-uppercase">{logo}</h2>
+            </a>
+          </Link>
           <div className="navigation-links">
             <ul className="d-lg-flex flex-row mb-2 mb-lg-0 p-0 justify-content-center">
               {Items?.Navlinks?.map((a) => (
@@ -68,7 +73,13 @@ const Items = {
 export const Icons = ({ className, url, title }) => {
   return (
     <li>
-      <a className={className} href={url} title={title} target="_blank" rel="noreferrer">
+      <a
+        className={className}
+        href={url}
+        title={title}
+        target="_blank"
+        rel="noreferrer"
+      >
         <FontAwesomeIcon icon={title} />
       </a>
     </li>

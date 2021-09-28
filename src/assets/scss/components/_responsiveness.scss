@@ -30,9 +30,10 @@
         height: auto !important;
 
         .contents {
-            .heading{
+            .heading {
                 margin-bottom: 0.8em;
             }
+
             .title {
                 span {
                     font-size: 3.12em !important;
@@ -52,9 +53,10 @@
 
     .characters-section {
         .contents {
-            .heading{
+            .heading {
                 margin-bottom: 0.8em;
             }
+
             .title {
                 span {
                     font-size: 3.12em !important;
@@ -66,9 +68,10 @@
 
     .bags-section {
         .contents {
-            .heading{
+            .heading {
                 margin-bottom: 0.8em;
             }
+
             .title {
                 span {
                     font-size: 3.12em !important;
@@ -80,9 +83,10 @@
 
     .discover-section {
         .contents {
-            .heading{
+            .heading {
                 margin-bottom: 0.8em;
             }
+
             .title {
                 span {
                     font-size: 3.12em !important;
@@ -96,14 +100,71 @@
         margin: 0 !important;
     }
 
-    .characters-section .contents .item .image img{
+    .characters-section .contents .item .image img {
         object-fit: contain !important;
+    }
+
+    .about-hero {
+        height: auto !important;
+        padding-top: 6em;
+        padding-bottom: 6em;
+
+        .contents {
+            width: 100% !important;
+            margin: 0 !important;
+
+            .title {
+                span {
+                    font-size: 2em !important;
+                }
+            }
+        }
+
+    }
+
+    .character{
+        .wrapper{
+            .title{
+                span{
+                    font-size: 2.5em !important;
+                }
+            }
+        }
+    }
+
+    .gameplay{
+        .gameplay-hero{
+            .contents{
+                width: 100% !important;
+            }
+        }
+        .wrapper{
+            .title{
+                span{
+                    font-size: 2.5em !important;
+                }
+            }
+
+            .tasks{
+                .row{
+                    margin-top: 10em !important;
+                }
+            }
+        }
     }
 
     .footer {
         .wrapper {
             width: 100%;
         }
+    }
+
+    p{
+        font-size: 1.1em !important;
+    }
+
+    .description{
+        font-size: 1.1em !important;
     }
 }
 
