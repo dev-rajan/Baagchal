@@ -11,7 +11,7 @@ const History = () => {
             <span className="text-uppercase">{Items?.title}</span>
           </div>
           <p className="description">{Items?.description}</p>
-          <Link href="/history">
+          <Link href="/about">
             <a className="learnmore btn">Learn More</a>
           </Link>
         </div>

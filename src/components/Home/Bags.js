@@ -24,18 +24,21 @@ const Bags = () => {
 
 export default Bags;
 
-const BagItem = ({ url, title, image }) => {
+const BagItem = ({ url, title, image, ico }) => {
   return (
     <div className="col-md-6 mt-5 mt-md-0">
       <div className="buy-btn">
         <figure>
           <Image src={image.default} alt={title} title={title} />
         </figure>
-        <div className="title mb-4">
-          <span>{title}</span>
+        <div className="title d-flex justify-content-center mb-4">
+          <Image src={ico} />
+          <div className="chest-title">
+            <span>{title}</span>
+          </div>
         </div>
         <Link href={url}>
-          <a className="btn">Buy</a>
+          <a className="btn">Connect Wallet</a>
         </Link>
       </div>
     </div>
@@ -48,15 +51,17 @@ const Items = {
   ChestItem: [
     {
       id: 1,
-      title: "Common",
+      title: "Common Bag",
       url: "/",
       image: require("../../assets/images/bags1.png"),
+      ico: require("../../assets/images/herointel.svg"),
     },
     {
       id: 2,
-      title: "Rare",
+      title: "Rare Bag",
       url: "/",
       image: require("../../assets/images/bags2.png"),
+      ico: require("../../assets/images/heroagility.svg"),
     },
   ],
 };

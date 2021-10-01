@@ -67,9 +67,14 @@
   }
 }
 
+.header{
+  padding-top: 1em;
+}
+
 .header.active {
-  background: #0C1C35;
+  background: #0C1C35e6;
   box-shadow: 0px 3px 6px rgb(0 0 0 / 16%);
+  padding-top: 0;
 
   .navbar-brand{
     color: #F35728 !important;
@@ -83,5 +88,5 @@
 }
 
 .btn-check:focus + .btn, .btn:focus{
-  box-shadow: none;
+  box-shadow: none !important;
 }

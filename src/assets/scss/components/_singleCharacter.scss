@@ -1,31 +1,149 @@
 .character {
     background-color: #141829;
     padding: 8em 0;
+    background-image: url('../../images/characterbg.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: auto;
+    background-size: cover;
+    display: flex;
+    position: relative;
 
-    .image {
-        img {
-            width: 100%;
-            object-fit: contain;
-        }
+    &::before {
+        content: '';
+        position: absolute;
+        background-image: linear-gradient(180deg, rgba(20, 24, 41, 0) 0%, #141829 30.45%, rgba(20, 24, 41, 0.97) 53.82%, rgba(20, 24, 41, 0) 97.48%);
+        height: 25em;
+        top: -7.62em;
+        left: 0;
+        width: 100%;
     }
 
-    .wrapper {
-        .title {
+    &::after {
+        content: '';
+        background-image: linear-gradient(180deg, rgba(20, 24, 41, 0) 10.49%, rgba(20, 24, 41, 0.85) 50%, #141829 67%);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 55em;
+    }
 
-            span {
-                font-family: $imported-font-family;
-                font-size: 4.12em;
-                color: $white;
+    .character-info {
+        z-index: 2;
+        width: 100%;
+
+        .image {
+            img {
+                width: 100% !important;
+                object-fit: contain;
             }
         }
 
-        .type {
-            span {
-                font-size: 1.625em;
-                line-height: 0.438em;
-                color: #F35629;
-                font-weight: 400;
+        .wrapper {
+            .title {
+
+                span {
+                    font-family: $imported-font-family;
+                    font-size: 4.12em;
+                    color: $white;
+                }
+            }
+
+            .type {
+
+                img {
+                    width: 25px;
+                    height: 25px;
+                }
+
+                .type-text {
+                    margin-left: 0.6em;
+
+                    span {
+                        font-size: 1.125em;
+                        line-height: 0.438em;
+                        color: $white;
+                        font-weight: 400;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+
+        .slick-prev {
+            background-image: url('../../images/leftarrow.svg');
+            width: 90px;
+            height: 90px;
+            background-size: contain;
+            opacity: 0.1;
+            z-index: 1;
+            transition: 0.2s ease;
+
+            &:hover {
+                background-image: url('../../images/leftarrow.svg') !important;
+                opacity: 1;
+            }
+
+            &::before {
+                content: '';
+            }
+        }
+
+        .slick-next {
+            background-image: url('../../images/rightarrow.svg');
+            width: 90px;
+            height: 90px;
+            background-size: contain;
+            opacity: 0.1;
+            transition: 0.2s ease;
+
+            &:hover {
+                background-image: url('../../images/rightarrow.svg') !important;
+                opacity: 1;
+            }
+
+            &::before {
+                content: '';
+            }
+        }
+
+        .slick-slider:nth-child(2) {
+
+            .slick-list {
+                &::before {
+                    background: linear-gradient(94.71deg, #141829 39.64%, rgba(20, 24, 41, 0) 88.87%);
+                    transform: matrix(-1, 0, 0, 1, 0, 0);
+                    content: '';
+                    position: absolute;
+                    right: 0;
+                    z-index: 9999;
+                    top: 16%;
+                    height: 18em;
+                    width: 9em;
+                }
+
+                &::after {
+                    background-image: linear-gradient(94.71deg, #141829 39.64%, rgba(20, 24, 41, 0) 88.87%);
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    z-index: 9999;
+                    top: 16%;
+                    height: 18em;
+                    width: 9em;
+                }
+            }
+
+
+            .slick-slide img {
+                filter: grayscale(1);
+                cursor: pointer;
+            }
+
+            .slick-slide.slick-active.slick-center.slick-current img {
+                filter: none;
             }
         }
     }
+
 }

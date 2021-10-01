@@ -72,7 +72,7 @@ p {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
   color: $black;
 }
 
@@ -148,4 +148,15 @@ ul {
 
 .arrow {
   font-size: 35px;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background-color: $primary-color !important;
+}
+
+.characters-section .contents .wrapper .owl-nav .owl-prev,
+.characters-section .contents .wrapper .owl-nav .owl-next {
+  background-color: transparent;
+  border: none;
 }

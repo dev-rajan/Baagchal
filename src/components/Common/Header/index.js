@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
-import { faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
-import { faTelegramPlane } from "@fortawesome/free-brands-svg-icons";
-import { faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
+import Cross from "../../../assets/images/cross.svg";
+import Menu from "../../../assets/images/menu.svg";
+import Twitter from "../../../assets/images/twitter.svg";
+import Facebook from "../../../assets/images/fb.svg";
+import Telegram from "../../../assets/images/telegram.svg";
+import Instagram from "../../../assets/images/insta.svg";
 import { Icons } from "../Footer";
 
 const Header = ({ logo = "Baagchal" }) => {
@@ -44,12 +44,16 @@ const Header = ({ logo = "Baagchal" }) => {
             <a className="navbar-brand text-uppercase">{logo}</a>
           </Link>
 
-          <button className="btn text-light d-lg-none" id="show" onClick={handleClick}>
-            <FontAwesomeIcon icon={faBars} size="2x" />
+          <button
+            className="btn text-light d-lg-none"
+            id="show"
+            onClick={handleClick}
+          >
+            <Image src={Menu} />
           </button>
 
           {/* SIDEBAR */}
-          <div id="nav" className={`navigation ${isOpen ? "active" : ''}`}>
+          <div id="nav" className={`navigation ${isOpen ? "active" : ""}`}>
             <div className="navigation__inner">
               <div className="d-flex justify-content-between px-2 nav-border">
                 <Link href="/">
@@ -60,26 +64,37 @@ const Header = ({ logo = "Baagchal" }) => {
                   id="close"
                   onClick={handleClick}
                 >
-                  <FontAwesomeIcon icon={faTimes} size="2x" />
+                  <Image src={Cross} />
                 </button>
               </div>
               {/* <!-- Navigation Content Here --> */}
               <ul className="navbar-nav mt-4 mb-2 mb-lg-0">
                 {Items?.map((a) => (
-                  <NavItem key={a.id} {...a} />
+                  <NavItem key={a.id} {...a} handleClick={handleClick} />
                 ))}
+                <li className="nav-item" onClick={handleClick}>
+                  <Link href={`/faq`}>
+                    <a className="nav-link">FAQ</a>
+                  </Link>
+                </li>
+                <li className="nav-item" onClick={handleClick}>
+                  <Link href={`/`}>
+                    <a className="nav-link">Terms and conditions</a>
+                  </Link>
+                </li>
+                <li className="nav-item" onClick={handleClick}>
+                  <Link href={`/`}>
+                    <a className="nav-link">Privacy and Policy</a>
+                  </Link>
+                </li>
               </ul>
               <div className="fixed-bottom nav-footer">
                 <div className="social-icons">
                   <ul className="d-flex justify-content-start p-0">
-                    <Icons className="twitter" url="/" title={faTwitter} />
-                    <Icons className="facebook" url="/" title={faFacebookF} />
-                    <Icons
-                      className="telegram"
-                      url="/"
-                      title={faTelegramPlane}
-                    />
-                    <Icons className="instagram" url="/" title={faInstagram} />
+                    <Icons className="twitter" url="/" title={Twitter} />
+                    <Icons className="facebook" url="/" title={Facebook} />
+                    <Icons className="telegram" url="/" title={Telegram} />
+                    <Icons className="instagram" url="/" title={Instagram} />
                   </ul>
                 </div>
                 <p className="copyright m-2">
@@ -109,9 +124,9 @@ const Header = ({ logo = "Baagchal" }) => {
 
 export default Header;
 
-export const NavItem = ({ title, url }) => {
+export const NavItem = ({ title, url, handleClick }) => {
   return (
-    <li className="nav-item">
+    <li className="nav-item" onClick={handleClick}>
       <Link href={`/${url}`}>
         <a className="nav-link">{title}</a>
       </Link>

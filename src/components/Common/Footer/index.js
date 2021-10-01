@@ -1,10 +1,10 @@
 import React from "react";
 import { NavItem } from "../Header";
-import { faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
-import { faTelegramPlane } from "@fortawesome/free-brands-svg-icons";
-import { faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
+import Twitter from "../../../assets/images/twitter.svg";
+import Facebook from "../../../assets/images/fb.svg";
+import Telegram from "../../../assets/images/telegram.svg";
+import Instagram from "../../../assets/images/insta.svg";
 import Link from "next/link";
 
 const Footer = ({ logo = "Baagchal" }) => {
@@ -27,10 +27,10 @@ const Footer = ({ logo = "Baagchal" }) => {
           <p className="description">{Items?.description}</p>
           <div className="social-icons">
             <ul className="d-flex justify-content-center p-0">
-              <Icons className="twitter" url="/" title={faTwitter} />
-              <Icons className="facebook" url="/" title={faFacebookF} />
-              <Icons className="telegram" url="/" title={faTelegramPlane} />
-              <Icons className="instagram" url="/" title={faInstagram} />
+              <Icons className="twitter" url="/" title={Twitter} />
+              <Icons className="facebook" url="/" title={Facebook} />
+              <Icons className="telegram" url="/" title={Telegram} />
+              <Icons className="instagram" url="/" title={Instagram} />
             </ul>
           </div>
           <p className="copyright">{Items?.copyright}</p>
@@ -57,12 +57,12 @@ const Items = {
     {
       id: 3,
       title: "Terms and Conditions",
-      url: "/terms",
+      url: "/",
     },
     {
       id: 4,
       title: "Privacy Policy",
-      url: "/privacy",
+      url: "/",
     },
   ],
   description:
@@ -80,7 +80,7 @@ export const Icons = ({ className, url, title }) => {
         target="_blank"
         rel="noreferrer"
       >
-        <FontAwesomeIcon icon={title} />
+        <Image src={title} />
       </a>
     </li>
   );

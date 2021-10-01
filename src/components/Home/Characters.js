@@ -2,10 +2,11 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
+import "owl.carousel/dist/assets/owl.carousel.min.css";
+import "owl.carousel/dist/assets/owl.theme.default.min.css";
+import Type from "../../assets/images/heroagility.svg";
 
-const OwlCarousel = dynamic(() => import("react-owl-carousel-autoheight"), {
+const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
   ssr: false,
 });
 
@@ -16,27 +17,37 @@ const Characters = () => {
     margin: 0,
     responsive: {
       0: {
+        nav: false,
         items: 1,
+        dots: true,
       },
-      600: {
-        items: 5,
+      767: {
+        nav: false,
+        items: 4,
+        dots: true,
       },
       1000: {
+        nav: true,
         items: 7,
+        dots: false,
       },
     },
+    navText: [
+      '<i class="fa fa-angle-left"></i>',
+      '<i class="fa fa-angle-right"></i>',
+    ],
   };
   return (
     <section className="characters-section">
       <div className="contents d-flex justify-content-center">
-        <div className="wrapper container">
+        <div className="wrapper container-fluid">
           <h3 className="heading">{Items?.heading}</h3>
           <div className="title">
             <span className="text-uppercase">{Items?.title}</span>
           </div>
           <div className="row mt-5">
-            <div className="col-12">
-              <OwlCarousel {...options}>
+            <div className="col-12 carousel">
+              <OwlCarousel className="owl-theme" {...options}>
                 {Items?.Players.map((a) => (
                   <Player key={a.id} {...a} />
                 ))}
@@ -70,7 +81,12 @@ const Player = ({ url, image, player_name, player_type }) => {
             <div className="player-name">
               <span className="text-uppercase">{player_name}</span>
             </div>
-            <span className="player-type">{player_type}</span>
+            <div className="type d-flex align-items-center justify-content-center">
+              <Image src={Type} priority={true} />
+              <div className="type-text">
+                <span className="text-uppercase">{player_type}</span>
+              </div>
+            </div>
           </div>
         </a>
       </Link>
@@ -84,49 +100,49 @@ const Items = {
   Players: [
     {
       id: 1,
-      url: "/",
+      url: "/characters",
       image: require("../../assets/images/1.png"),
       player_name: "Sherkhan",
-      player_type: "Common",
+      player_type: "Rare",
     },
     {
       id: 2,
-      url: "/",
+      url: "/characters",
       image: require("../../assets/images/2.png"),
       player_name: "Sherkhan",
       player_type: "Common",
     },
     {
       id: 3,
-      url: "/",
+      url: "/characters",
       image: require("../../assets/images/3.png"),
       player_name: "Sherkhan",
-      player_type: "Common",
+      player_type: "Rare",
     },
     {
       id: 4,
-      url: "/",
+      url: "/characters",
       image: require("../../assets/images/4.png"),
       player_name: "Sherkhan",
       player_type: "Common",
     },
     {
       id: 5,
-      url: "/",
+      url: "/characters",
       image: require("../../assets/images/5.png"),
       player_name: "Sherkhan",
-      player_type: "Common",
+      player_type: "Rare",
     },
     {
       id: 6,
-      url: "/",
+      url: "/characters",
       image: require("../../assets/images/6.png"),
       player_name: "Sherkhan",
-      player_type: "Common",
+      player_type: "Rare",
     },
     {
       id: 7,
-      url: "/",
+      url: "/characters",
       image: require("../../assets/images/7.png"),
       player_name: "Sherkhan",
       player_type: "Common",

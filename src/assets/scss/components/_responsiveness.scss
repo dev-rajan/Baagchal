@@ -1,15 +1,39 @@
 @import "../abstracts/mixins";
 
+@include max-break-point(extra-small) {
+    .character {
+        .character-info{
+            .slick-slider:nth-child(2) .slick-list::before{
+                height: 7em !important;
+                width: 3em !important;
+            }
+            .slick-slider:nth-child(2) .slick-list::after{
+                height: 7em !important;
+                width: 3em !important;
+            }
+        }
+    }
+}
+
 @include max-break-point(tablet) {
     .hero-section {
         .contents {
             width: 100%;
 
+            .wrapper{
+                width: 100% !important;
+            }
+
+            .logo {
+                margin-bottom: 0.3em !important;
+            }
+
             .title {
                 span {
-
-                    font-size: 3.12em;
+                    font-size: 3.12em !important;
                 }
+
+                line-height: 3.5em;
             }
         }
     }
@@ -53,6 +77,14 @@
 
     .characters-section {
         .contents {
+
+            .wrapper .owl-stage-outer::before{
+                content: none !important;
+            }
+
+            .wrapper .owl-stage-outer::after{
+                content: none !important;
+            }
             .heading {
                 margin-bottom: 0.8em;
             }
@@ -122,31 +154,45 @@
 
     }
 
-    .character{
-        .wrapper{
-            .title{
-                span{
+    .character {
+        .wrapper {
+            .title {
+                span {
                     font-size: 2.5em !important;
                 }
+            }
+        }
+
+        .character-info{
+            .slick-slider:nth-child(2) .slick-list::before{
+                right: -0.1em !important;
+                height: 10em !important;
+                width: 3em !important;
+            }
+            .slick-slider:nth-child(2) .slick-list::after{
+                left: -0.1em !important;
+                height: 10em !important;
+                width: 3em !important;
             }
         }
     }
 
-    .gameplay{
-        .gameplay-hero{
-            .contents{
+    .gameplay {
+        .gameplay-hero {
+            .contents {
                 width: 100% !important;
             }
         }
-        .wrapper{
-            .title{
-                span{
+
+        .wrapper {
+            .title {
+                span {
                     font-size: 2.5em !important;
                 }
             }
 
-            .tasks{
-                .row{
+            .tasks {
+                .row {
                     margin-top: 10em !important;
                 }
             }
@@ -157,13 +203,17 @@
         .wrapper {
             width: 100%;
         }
+
+        .copyrights{
+            font-size: 0.3em !important;
+        }
     }
 
-    p{
+    p {
         font-size: 1.1em !important;
     }
 
-    .description{
+    .description {
         font-size: 1.1em !important;
     }
 }
@@ -181,5 +231,11 @@
         .wrapper {
             width: 65%;
         }
+    }
+}
+
+@include min-break-point(tablet) {
+    .owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled {
+        display: block !important;
     }
 }

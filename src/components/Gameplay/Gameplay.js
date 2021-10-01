@@ -1,33 +1,50 @@
 import React from "react";
+import Meta from "../../partials/Meta";
 
 const Gameplay = () => {
   return (
-    <section className="gameplay">
-      <div className="gameplay-hero">
-        <div className="bg-img"></div>
-        <div className="contents d-flex align-items-center justify-content-center">
+    <>
+      <Meta
+        DESCRIPTION="description"
+        OG_TYPE="og:type"
+        OG_TITLE="og:title"
+        OG_DESCRIPTION="description"
+        OG_URL="og:url"
+        TWITTER_CARD="twitter:card"
+        TWITTER_TITLE="twitter:title"
+        TWITTER_DESC="twitter:description"
+        TWITTER_URL="twitter:url"
+        OG_IMG="og:image"
+        TWITTER_IMG="twitter:image"
+        TITLE="Baagchal || Gameplay"
+      />
+      <section className="gameplay">
+        <div className="gameplay-hero">
+          <div className="bg-img"></div>
+          <div className="contents d-flex align-items-center justify-content-center">
+            <div className="wrapper container">
+              <div className="heading">
+                <span>{Items?.heading}</span>
+              </div>
+              <div className="title">
+                <span className="text-uppercase">{Items?.title}</span>
+              </div>
+              <p className="description text-light">{Items?.description}</p>
+            </div>
+          </div>
+        </div>
+        {/* Instruction */}
+        <div className="instruction">
           <div className="wrapper container">
-            <div className="heading">
-              <span>{Items?.heading}</span>
+            <div className="tasks">
+              {Items?.info?.map((a) => (
+                <GameInfo key={a.id} {...a} />
+              ))}
             </div>
-            <div className="title">
-              <span className="text-uppercase">{Items?.title}</span>
-            </div>
-            <p className="description text-light">{Items?.description}</p>
           </div>
         </div>
-      </div>
-      {/* Instruction */}
-      <div className="instruction">
-        <div className="wrapper container">
-          <div className="tasks">
-            {Items?.info?.map((a) => (
-              <GameInfo key={a.id} {...a} />
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

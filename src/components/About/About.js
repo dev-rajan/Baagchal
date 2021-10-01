@@ -1,34 +1,52 @@
 import React from "react";
 import Image from "next/image";
 import Rect from "../../assets/images/roadmap.png";
+import Meta from "../../partials/Meta";
 
 const About = () => {
   return (
-    <section className="about">
-      <div className="about-hero">
-        <div className="contents d-flex align-items-center justify-content-center">
-          <div className="wrapper container">
-            <div className="title">
-              <span className="text-uppercase">{Items?.title}</span>
+    <>
+      <Meta
+        DESCRIPTION="description"
+        OG_TYPE="og:type"
+        OG_TITLE="og:title"
+        OG_DESCRIPTION="description"
+        OG_URL="og:url"
+        TWITTER_CARD="twitter:card"
+        TWITTER_TITLE="twitter:title"
+        TWITTER_DESC="twitter:description"
+        TWITTER_URL="twitter:url"
+        OG_IMG="og:image"
+        TWITTER_IMG="twitter:image"
+        TITLE="Baagchal || About"
+      />
+      <section className="about">
+        <div className="about-hero">
+        <div className="bg-img"></div>
+          <div className="contents d-flex align-items-center justify-content-center">
+            <div className="wrapper container">
+              <div className="title">
+                <span className="text-uppercase">{Items?.title}</span>
+              </div>
+              <p className="description">{Items?.description}</p>
             </div>
-            <p className="description">{Items?.description}</p>
           </div>
         </div>
-      </div>
-      {/* Roadmap */}
-      <div className="roadmap">
-        <div className="wrapper container">
-          <div className="title text-center">
-            <span className="text-uppercase">{Items?.roadmap?.title}</span>
-          </div>
-          <div className="tasks">
-            {Items?.roadmap?.info?.map((a) => (
-              <RoadMap key={a.id} {...a} lists={a.lists} Rect={Rect} />
-            ))}
+        {/* Roadmap */}
+        <div className="roadmap">
+          <div className="wrapper container">
+            <div className="title text-center">
+              <span className="text-uppercase">{Items?.roadmap?.title}</span>
+            </div>
+            <div className="tasks">
+              {Items?.roadmap?.info?.map((a) => (
+                <RoadMap key={a.id} {...a} lists={a.lists} Rect={Rect} />
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
@@ -46,7 +64,7 @@ const RoadMap = ({ Rect, heading, lists }) => {
           <div className="info">
             <span className="heading">{heading}</span>
             <ul className="p-0">
-              {lists?.map((a ,idx) => (
+              {lists?.map((a, idx) => (
                 <li key={idx}>{a}</li>
               ))}
             </ul>

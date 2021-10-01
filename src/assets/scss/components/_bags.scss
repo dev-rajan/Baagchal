@@ -1,5 +1,6 @@
 .bags-section {
     background-image: url('../../images/chestsectionnew1.png');
+    background-color: $gray;
     height: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -20,11 +21,11 @@
 
     &::after {
         content: '';
-        background-image: linear-gradient(180deg, rgba(20, 24, 41, 0) 84%, rgba(20, 24, 41, 0.85) 100%, #141829 100%);
+        background-image: linear-gradient(180deg, rgba(20, 24, 41, 0) 10.49%, rgba(70, 76, 99, 0.2) 20%, #141829 100%);
         position: absolute;
         bottom: 0;
         width: 100%;
-        height: 39.6em;
+        height: 18em;
     }
 
     .contents {
@@ -47,24 +48,38 @@
             }
         }
 
-        .bags{
+        .bags {
             margin: 8em 0;
         }
 
-        .buy-btn{
-            figure{
-                img{
-                    width: 300px;
+        .buy-btn {
+            figure {
+                img {
+                    width: 18.75em;
+                }
+            }
+
+            .title {
+                img {
+                    width: 2em;
+                    height: 2em;
+                }
+
+                .chest-title {
+                    margin-left: 0.6em;
+
+                    span{
+                        font-size: 2.25em;
+                    }
                 }
             }
         }
 
         .btn {
-            font-size: 1.5em;
+            font-size: 1.25em;
             background-image: $bg-color;
             color: $white;
-            font-weight: 600;
-            padding: 0.5em 4em;
+            padding: 0.4em 1.5em;
         }
     }
 

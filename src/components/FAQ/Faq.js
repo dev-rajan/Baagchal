@@ -1,19 +1,36 @@
 import React from "react";
+import Meta from "../../partials/Meta";
 import AccordinItem from "./AccordinItem";
 
 const Faq = ({ title = "Frequently asked Questions" }) => {
   return (
-    <section className="faq">
-      <div className="container">
-        <h2 className="heading text-center">{title}</h2>
+    <>
+      <Meta
+        DESCRIPTION="description"
+        OG_TYPE="og:type"
+        OG_TITLE="og:title"
+        OG_DESCRIPTION="description"
+        OG_URL="og:url"
+        TWITTER_CARD="twitter:card"
+        TWITTER_TITLE="twitter:title"
+        TWITTER_DESC="twitter:description"
+        TWITTER_URL="twitter:url"
+        OG_IMG="og:image"
+        TWITTER_IMG="twitter:image"
+        TITLE="Baagchal || FAQ"
+      />
+      <section className="faq">
+        <div className="container">
+          <h2 className="heading text-center">{title}</h2>
 
-        <div className="col-12 questions">
-          {Items?.map((a) => (
-            <AccordinItem key={a.id} {...a} ques={a.ques} ans={a.ans} />
-          ))}
+          <div className="col-12 questions">
+            {Items?.map((a) => (
+              <AccordinItem key={a.id} {...a} ques={a.ques} ans={a.ans} />
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
