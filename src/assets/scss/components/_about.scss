@@ -132,6 +132,10 @@
                         .box {
                             justify-content: flex-end;
 
+                            .info{
+                                text-align: right;
+                            }
+
                             figure {
                                 order: 1;
                                 margin-left: 3em;

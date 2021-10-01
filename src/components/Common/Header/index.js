@@ -11,6 +11,10 @@ import { Icons } from "../Footer";
 
 const Header = ({ logo = "Baagchal" }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [path, setPath] = useState();
+  useEffect(() => {
+    setPath(window.location.pathname);
+  });
 
   const handleClick = () => {
     if (isOpen === false) {
@@ -53,7 +57,10 @@ const Header = ({ logo = "Baagchal" }) => {
           </button>
 
           {/* SIDEBAR */}
-          <div id="nav" className={`navigation ${isOpen ? "active" : ""}`}>
+          <div
+            id="nav"
+            className={`navigation d-lg-none ${isOpen ? "active" : ""}`}
+          >
             <div className="navigation__inner">
               <div className="d-flex justify-content-between px-2 nav-border">
                 <Link href="/">
@@ -87,6 +94,10 @@ const Header = ({ logo = "Baagchal" }) => {
                     <a className="nav-link">Privacy and Policy</a>
                   </Link>
                 </li>
+                <li class="nav-item mt-3"></li>
+                <Link href="/">
+                  <a class="btn connect-btn mt-3 mx-4">Connect Wallet</a>
+                </Link>
               </ul>
               <div className="fixed-bottom nav-footer">
                 <div className="social-icons">
@@ -108,7 +119,7 @@ const Header = ({ logo = "Baagchal" }) => {
             {/* Navlinks */}
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               {Items?.map((a) => (
-                <NavItem key={a.id} {...a} />
+                <NavItem key={a.id} {...a} pathname={path} />
               ))}
             </ul>
             {/* Connect Button */}
@@ -124,11 +135,13 @@ const Header = ({ logo = "Baagchal" }) => {
 
 export default Header;
 
-export const NavItem = ({ title, url, handleClick }) => {
+export const NavItem = ({ title, url, handleClick, pathname }) => {
   return (
     <li className="nav-item" onClick={handleClick}>
       <Link href={`/${url}`}>
-        <a className="nav-link">{title}</a>
+        <a className={`nav-link ${pathname?.match(url) ? "selected" : ""} `}>
+          {title}
+        </a>
       </Link>
     </li>
   );

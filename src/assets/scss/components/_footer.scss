@@ -49,12 +49,12 @@
                     background-color: #1f243d;
                     color: #7d85a6;
                     border-radius: 50px;
+                    border: 1px solid #1f243d;
                     font-size: 1.5em;
                     transition: 0.2s ease;
 
                     &:hover {
-                        background-color: #F97750;
-                        color: $white;
+                        border: 1px solid #099FDA;
                     }
                 }
 

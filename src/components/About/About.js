@@ -22,13 +22,13 @@ const About = () => {
       />
       <section className="about">
         <div className="about-hero">
-        <div className="bg-img"></div>
+          <div className="bg-img"></div>
           <div className="contents d-flex align-items-center justify-content-center">
             <div className="wrapper container">
               <div className="title">
                 <span className="text-uppercase">{Items?.title}</span>
               </div>
-              <p className="description">{Items?.description}</p>
+              <p dangerouslySetInnerHTML={{ __html: Items?.description }} />
             </div>
           </div>
         </div>
@@ -78,7 +78,7 @@ const RoadMap = ({ Rect, heading, lists }) => {
 const Items = {
   title: "About Bagchal",
   description:
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply \ndummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. \ndummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem ",
+    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora officiis illo animi, quam tempore dignissimos ducimus. Harum, sapiente aliquam. Facere quisquam error laboriosam quasi dolorum quaerat cupiditate impedit at quibusdam ullam praesentium deserunt tempora beatae a distinctio libero itaque harum ratione sapiente, consectetur eveniet soluta enim aut? Odio, est. Autem soluta ab, tempore et, praesentium laboriosam cum facilis esse mollitia totam, incidunt cumque distinctio architecto. Provident ratione neque iste. Non cum dolorum enim nobis fugiat ad reprehenderit ratione totam nisi?",
 
   roadmap: {
     title: "Roadmap",

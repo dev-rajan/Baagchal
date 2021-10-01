@@ -122,18 +122,7 @@
                 background-size: contain;
                 padding: 1em;
                 position: relative;
-
-                &::before {
-                    content: '';
-                    background-color: #141829ad;
-                    position: absolute;
-                    top: 0;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-                    border-radius: 12px;
-                    z-index: 2;
-                }
+                opacity: 0.3;
 
                 img {
                     width: 166px;
@@ -197,9 +186,7 @@
                 .image {
                     background-image: url('../../images/border.png');
 
-                    &::before {
-                        background-color: transparent;
-                    }
+                    opacity: 1;
 
                     figure>div {
                         position: initial !important;
