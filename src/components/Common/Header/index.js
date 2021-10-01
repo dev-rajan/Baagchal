@@ -94,9 +94,9 @@ const Header = ({ logo = "Baagchal" }) => {
                     <a className="nav-link">Privacy and Policy</a>
                   </Link>
                 </li>
-                <li class="nav-item mt-3"></li>
+                <li className="nav-item mt-3"></li>
                 <Link href="/">
-                  <a class="btn connect-btn mt-3 mx-4">Connect Wallet</a>
+                  <a className="btn connect-btn mt-3 mx-4">Connect Wallet</a>
                 </Link>
               </ul>
               <div className="fixed-bottom nav-footer">

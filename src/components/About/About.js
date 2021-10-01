@@ -59,7 +59,7 @@ const RoadMap = ({ Rect, heading, lists }) => {
       <div className="col-md-6 right">
         <div className="box d-flex">
           <figure>
-            <Image src={Rect} />
+            <Image src={Rect} alt="shape" />
           </figure>
           <div className="info">
             <span className="heading">{heading}</span>
