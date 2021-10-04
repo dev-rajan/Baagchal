@@ -2,12 +2,13 @@
 
 @include max-break-point(extra-small) {
     .character {
-        .character-info{
-            .slick-slider:nth-child(2) .slick-list::before{
+        .character-info {
+            .slick-slider:nth-child(2) .slick-list::before {
                 height: 7em !important;
                 width: 3em !important;
             }
-            .slick-slider:nth-child(2) .slick-list::after{
+
+            .slick-slider:nth-child(2) .slick-list::after {
                 height: 7em !important;
                 width: 3em !important;
             }
@@ -20,7 +21,7 @@
         .contents {
             width: 100%;
 
-            .wrapper{
+            .wrapper {
                 width: 100% !important;
             }
 
@@ -78,13 +79,14 @@
     .characters-section {
         .contents {
 
-            .wrapper .owl-stage-outer::before{
+            .wrapper .owl-stage-outer::before {
                 content: none !important;
             }
 
-            .wrapper .owl-stage-outer::after{
+            .wrapper .owl-stage-outer::after {
                 content: none !important;
             }
+
             .heading {
                 margin-bottom: 0.8em;
             }
@@ -163,13 +165,14 @@
             }
         }
 
-        .character-info{
-            .slick-slider:nth-child(2) .slick-list::before{
+        .character-info {
+            .slick-slider:nth-child(2) .slick-list::before {
                 right: -0.1em !important;
                 height: 10em !important;
                 width: 3em !important;
             }
-            .slick-slider:nth-child(2) .slick-list::after{
+
+            .slick-slider:nth-child(2) .slick-list::after {
                 left: -0.1em !important;
                 height: 10em !important;
                 width: 3em !important;
@@ -204,7 +207,7 @@
             width: 100%;
         }
 
-        .copyrights{
+        .copyrights {
             font-size: 0.3em !important;
         }
     }
@@ -215,6 +218,32 @@
 
     .description {
         font-size: 1.1em !important;
+    }
+
+    .buyBag {
+
+        .row {
+            .right {
+                padding: 0;
+                .wrapper {
+                    width: 100%;
+                    padding: 0 15px;
+                }
+            }
+        }
+
+        .row:nth-child(even) {
+            .left {
+                order: 0 !important;
+            }
+
+            .right {
+                .wrapper {
+                    width: 100%;
+                    padding: 0 15px;
+                }
+            }
+        }
     }
 }
 
@@ -235,7 +264,9 @@
 }
 
 @include min-break-point(tablet) {
-    .owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled {
+
+    .owl-carousel .owl-dots.disabled,
+    .owl-carousel .owl-nav.disabled {
         display: block !important;
     }
 }

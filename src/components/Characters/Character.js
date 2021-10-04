@@ -20,7 +20,7 @@ const Character = () => {
   };
 
   const settings = {
-    centerMode: true,
+    centerMode : true,
     slidesToShow: 8,
     infinite: true,
     speed: 500,
@@ -34,7 +34,7 @@ const Character = () => {
         settings: {
           arrows: true,
           dots: false,
-          slidesToShow: 6,
+          slidesToShow: 8,
         },
       },
       {

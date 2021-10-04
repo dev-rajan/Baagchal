@@ -21,7 +21,6 @@
             left: 0;
             width: 100%;
             z-index: 1;
-
         }
 
         &::after {
@@ -96,6 +95,7 @@
             .tasks {
                 margin-top: 6em;
                 padding-bottom: 6em;
+                position: relative;
 
                 .heading {
                     font-family: $imported-font-family;
@@ -117,6 +117,7 @@
                         .box {
                             figure {
                                 margin-right: 3em;
+                                z-index: 2;
                             }
                         }
                     }
@@ -132,7 +133,7 @@
                         .box {
                             justify-content: flex-end;
 
-                            .info{
+                            .info {
                                 text-align: right;
                             }
 
@@ -143,6 +144,18 @@
                             }
                         }
                     }
+                }
+
+                .line{
+                    background: url('../../images/line.svg');
+                    background-position: top center;
+                    background-repeat: no-repeat;
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    top: 1.2em;
+                    left: 0;
+                    z-index: 1;
                 }
             }
         }

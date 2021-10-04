@@ -73,13 +73,33 @@
                     }
                 }
             }
+
+            .price{
+                font-size: 1.1em;
+                color: #777d94;
+
+                .gamePrice{
+                    font-size: 1.5em;
+                    font-weight: 600;
+                    color: $white;
+                }
+
+                .learnMore{
+                    span{
+                        img{
+                            width: 10px;
+                            height: 10px;
+                        }
+                    }
+                }
+            }
         }
 
         .btn {
             font-size: 1.25em;
             background-image: $bg-color;
             color: $white;
-            padding: 0.4em 1.5em;
+            padding: 0.4em 2.7em;
         }
     }
 

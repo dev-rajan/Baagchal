@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Rect from "../../assets/images/roadmap.png";
+import Rect from "../../assets/images/roadmap.svg";
 import Meta from "../../partials/Meta";
 
 const About = () => {
@@ -42,6 +42,7 @@ const About = () => {
               {Items?.roadmap?.info?.map((a) => (
                 <RoadMap key={a.id} {...a} lists={a.lists} Rect={Rect} />
               ))}
+              <div className="line d-none d-md-block"></div>
             </div>
           </div>
         </div>

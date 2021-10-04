@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Learn from "../../assets/images/info.svg";
 
 const Bags = () => {
   return (
@@ -24,22 +25,34 @@ const Bags = () => {
 
 export default Bags;
 
-const BagItem = ({ url, title, image, ico }) => {
+const BagItem = ({ url, title, image, ico, price, usPrice }) => {
   return (
     <div className="col-md-6 mt-5 mt-md-0">
       <div className="buy-btn">
-        <figure>
+        <figure className="m-0">
           <Image src={image.default} alt={title} title={title} />
         </figure>
-        <div className="title d-flex justify-content-center mb-4">
+        <div className="title d-flex justify-content-center">
           <Image src={ico} />
           <div className="chest-title">
             <span>{title}</span>
           </div>
         </div>
+        <div className="price mb-4 mt-1">
+          Price: <span className="gamePrice mx-1">{price} SOL</span> {usPrice}
+          &nbsp;USD
+        </div>
         <Link href={url}>
-          <a className="btn">Connect Wallet</a>
+          <a className="btn">Buy Bag</a>
         </Link>
+        <div className="mt-4">
+          <Link href={url}>
+            <a className="learnMore text-light d-flex justify-content-center">
+              <Image src={Learn} />
+              <span className="ms-2">Learn More</span>
+            </a>
+          </Link>
+        </div>
       </div>
     </div>
   );
@@ -52,16 +65,20 @@ const Items = {
     {
       id: 1,
       title: "Common Bag",
-      url: "/",
+      url: "/buyBag",
       image: require("../../assets/images/bags1.png"),
       ico: require("../../assets/images/herointel.svg"),
+      price: "4 ",
+      usPrice: "550",
     },
     {
       id: 2,
       title: "Rare Bag",
-      url: "/",
+      url: "/buyBag",
       image: require("../../assets/images/bags2.png"),
       ico: require("../../assets/images/heroagility.svg"),
+      price: "4 ",
+      usPrice: "550",
     },
   ],
 };
