@@ -2,8 +2,6 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Meta from "../../partials/Meta";
-import Bag from "../../assets/images/bags1.png";
-import Icon from "../../assets/images/herointel.svg";
 
 const BuyBag = () => {
   return (
@@ -67,8 +65,8 @@ const Items = ({ url, Bag, Icon, Type, price, usPrice, listItem }) => {
         </div>
         <div className="wrapper">
           <ul className="chestInfo-list ms-3 my-5">
-            {listItem?.map((a) => (
-              <li>
+            {listItem?.map((a, idx) => (
+              <li key={idx}>
                 <p>{a}</p>
               </li>
             ))}
