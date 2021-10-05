@@ -46,7 +46,7 @@ const Characters = () => {
             <span className="text-uppercase">{Items?.title}</span>
           </div>
           <div className="row mt-5">
-            <div className="col-12 carousel">
+            <div className="col-12 carousel" data-aos="fade-up" data-aos-delay="500">
               <OwlCarousel className="owl-theme" {...options}>
                 {Items?.Players.map((a) => (
                   <Player key={a.id} {...a} />
@@ -64,7 +64,7 @@ export default Characters;
 
 const Player = ({ url, image, player_name, player_type }) => {
   return (
-    <div data-aos="fade-up" data-aos-delay="500" className="item">
+    <div className="item">
       <Link href={url}>
         <a>
           <div className="image">
