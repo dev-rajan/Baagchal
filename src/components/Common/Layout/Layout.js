@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
       <Header />
       {children}
       <Footer />
-      <div class="mask-box"></div>
+      <div className="mask-box"></div>
     </>
   );
 };
