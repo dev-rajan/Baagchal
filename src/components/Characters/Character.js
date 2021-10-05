@@ -124,7 +124,7 @@ const Player_desc = ({ SingleImage, TypeIco, type, title, description }) => {
           <div className="title">
             <span className="text-uppercase">{title}</span>
           </div>
-          <p className="description">{description}</p>
+          <p className="description" dangerouslySetInnerHTML={{ __html: description }} />
         </div>
       </div>
     </div>

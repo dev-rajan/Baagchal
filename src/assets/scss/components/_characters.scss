@@ -61,7 +61,7 @@
                 }
 
                 .owl-prev {
-                    left: 0;
+                    left: -1em;
                     background-image: url('../../images/leftarrow.svg');
                     width: 90px;
                     height: 90px;
@@ -75,7 +75,7 @@
                 }
 
                 .owl-next {
-                    right: 0;
+                    right: -1em;
                     background-image: url('../../images/rightarrow.svg');
                     width: 90px;
                     height: 90px;
@@ -159,7 +159,7 @@
                             font-size: 1.125em;
                             line-height: 0.438em;
                             color: $white;
-                            font-weight: 400;
+                            font-weight: 700;
                             display: inline-block;
                         }
                     }
@@ -229,7 +229,7 @@
                                 font-size: 1.125em;
                                 line-height: 0.438em;
                                 color: $white;
-                                font-weight: 400;
+                                font-weight: 700;
                                 display: inline-block;
                             }
                         }

@@ -14,7 +14,7 @@ const Footer = ({ logo = "Baagchal" }) => {
         <div className="wrapper">
           <Link href="/">
             <a>
-              <h2 className="logo text-uppercase">{logo}</h2>
+              <span className="logo text-uppercase">{logo}</span>
             </a>
           </Link>
           <div className="navigation-links">

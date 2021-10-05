@@ -5,11 +5,11 @@ const Hero = () => {
     <section className="hero-section">
       <div className="contents d-flex align-items-center">
         <div className="wrapper">
-          <h2 data-aos="fade-up" data-aos-delay="500" className="logo m-0 text-uppercase">{Items?.logo}</h2>
-          <div data-aos="fade-up" data-aos-delay="600" className="title">
+          <h2 className="logo m-0 text-uppercase">{Items?.logo}</h2>
+          <div className="title">
             <span className="text-uppercase">{Items?.title}</span>
           </div>
-          <p data-aos="fade-up" data-aos-delay="700" className="description mt-2">{Items?.description}</p>
+          <p className="description mt-2">{Items?.description}</p>
         </div>
       </div>
     </section>

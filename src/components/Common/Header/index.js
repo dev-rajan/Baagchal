@@ -12,6 +12,7 @@ import { Icons } from "../Footer";
 const Header = ({ logo = "Baagchal" }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [path, setPath] = useState();
+
   useEffect(() => {
     setPath(window.location.pathname);
   });
@@ -67,7 +68,12 @@ const Header = ({ logo = "Baagchal" }) => {
             <div className="navigation__inner">
               <div className="d-flex justify-content-between px-2 nav-border">
                 <Link href="/">
-                  <a className="navbar-brand text-uppercase">{logo}</a>
+                  <a
+                    className="navbar-brand text-uppercase"
+                    onClick={handleClick}
+                  >
+                    {logo}
+                  </a>
                 </Link>
                 <button
                   className="btn text-light"
@@ -80,21 +86,45 @@ const Header = ({ logo = "Baagchal" }) => {
               {/* <!-- Navigation Content Here --> */}
               <ul className="navbar-nav mt-4 mb-2 mb-lg-0">
                 {Items?.map((a) => (
-                  <NavItem key={a.id} {...a} handleClick={handleClick} />
+                  <NavItem
+                    key={a.id}
+                    {...a}
+                    handleClick={handleClick}
+                    pathname={path}
+                  />
                 ))}
+
                 <li className="nav-item" onClick={handleClick}>
                   <Link href={`/faq`}>
-                    <a className="nav-link">FAQ</a>
+                    <a
+                      className={`nav-link ${
+                        path?.match("/faq") ? "selected" : ""
+                      } `}
+                    >
+                      FAQ
+                    </a>
                   </Link>
                 </li>
                 <li className="nav-item" onClick={handleClick}>
-                  <Link href={`/`}>
-                    <a className="nav-link">Terms and conditions</a>
+                  <Link href={`/terms`}>
+                    <a
+                      className={`nav-link ${
+                        path?.match("/terms") ? "selected" : ""
+                      } `}
+                    >
+                      Terms and conditions
+                    </a>
                   </Link>
                 </li>
                 <li className="nav-item" onClick={handleClick}>
-                  <Link href={`/`}>
-                    <a className="nav-link">Privacy and Policy</a>
+                  <Link href={`/privacy`}>
+                    <a
+                      className={`nav-link ${
+                        path?.match("/privacy") ? "selected" : ""
+                      } `}
+                    >
+                      Privacy and Policy
+                    </a>
                   </Link>
                 </li>
                 <li className="nav-item mt-3"></li>

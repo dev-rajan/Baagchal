@@ -63,7 +63,7 @@
                         font-size: 1.125em;
                         line-height: 0.438em;
                         color: $white;
-                        font-weight: 400;
+                        font-weight: 700;
                         display: inline-block;
                     }
                 }
@@ -110,6 +110,7 @@
         .slick-slider:nth-child(2) {
 
             .slick-list {
+                padding: 0 4em !important;
                 &::before {
                     background: linear-gradient(94.71deg, #141829 39.64%, rgba(20, 24, 41, 0) 88.87%);
                     transform: matrix(-1, 0, 0, 1, 0, 0);
