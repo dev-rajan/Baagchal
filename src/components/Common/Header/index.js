@@ -17,10 +17,13 @@ const Header = ({ logo = "Baagchal" }) => {
   });
 
   const handleClick = () => {
+    const body = document.getElementById("body");
     if (isOpen === false) {
       setIsOpen(true);
+      body.classList.add("fixed_body");
     } else {
       setIsOpen(false);
+      body.classList.remove("fixed_body");
     }
   };
 
