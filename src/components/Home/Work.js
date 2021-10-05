@@ -33,7 +33,7 @@ const Boxes = ({ image, question, description }) => {
         <div className="question">
           <span className="text-uppercase">{question}</span>
         </div>
-        <p className="answer">{description}</p>
+        <p className="answer" dangerouslySetInnerHTML={{ __html: description }} />
       </div>
     </div>
   );
@@ -48,7 +48,7 @@ const Items = {
       image: require("../../assets/images/54261.png"),
       question: "What are NFT?",
       description:
-        "A NFT (non-fungible token) is data added to a file that creates a unique signature. It can be an image file, a song, a tweet, a text posted on a website, a physical item, and various other digital formats. This basically means that someone can own a digital file (and that it's marked with code to differentiate it from any digital replicas).",
+        "A NFT (non-fungible token) is data added to a file that creates a unique signature. It can be an image file, a song, a tweet, a text posted on a website, a physical item, and various other digital formats.<br /> <br /> This basically means that someone can own a digital file (and that it's marked with code to differentiate it from any digital replicas).",
     },
     {
       id: 2,

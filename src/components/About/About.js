@@ -25,17 +25,25 @@ const About = () => {
           <div className="bg-img"></div>
           <div className="contents d-flex align-items-center justify-content-center">
             <div className="wrapper container">
-              <div data-aos="fade-up" data-aos-delay="300"  className="title">
+              <div data-aos="fade-up" data-aos-delay="300" className="title">
                 <span className="text-uppercase">{Items?.title}</span>
               </div>
-              <p data-aos="fade-up" data-aos-delay="400" dangerouslySetInnerHTML={{ __html: Items?.description }} />
+              <p
+                data-aos="fade-up"
+                data-aos-delay="400"
+                dangerouslySetInnerHTML={{ __html: Items?.description }}
+              />
             </div>
           </div>
         </div>
         {/* Roadmap */}
         <div className="roadmap">
           <div className="wrapper container">
-            <div data-aos="fade-up" data-aos-delay="300" className="title text-center">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="300"
+              className="title text-center"
+            >
               <span className="text-uppercase">{Items?.roadmap?.title}</span>
             </div>
             <div data-aos="fade-up" data-aos-delay="300" className="tasks">
@@ -79,7 +87,7 @@ const RoadMap = ({ Rect, heading, lists }) => {
 const Items = {
   title: "About Bagchal",
   description:
-    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora officiis illo animi, quam tempore dignissimos ducimus. Harum, sapiente aliquam. Facere quisquam error laboriosam quasi dolorum quaerat cupiditate impedit at quibusdam ullam praesentium deserunt tempora beatae a distinctio libero itaque harum ratione sapiente, consectetur eveniet soluta enim aut? Odio, est. Autem soluta ab, tempore et, praesentium laboriosam cum facilis esse mollitia totam, incidunt cumque distinctio architecto. Provident ratione neque iste. Non cum dolorum enim nobis fugiat ad reprehenderit ratione totam nisi?",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard <br /> <br /> dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br /> <br /> dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem ",
 
   roadmap: {
     title: "Roadmap",
