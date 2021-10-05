@@ -22,7 +22,7 @@ const BuyBag = () => {
       />
       <section className="buyBag">
         <div className="container-fluid">
-          <h2 className="heading text-center">{BagInfo.heading}</h2>
+          <h2 data-aos="fade-up" data-aos-delay="300" className="heading text-center">{BagInfo.heading}</h2>
 
           <div className="bags">
             {BagInfo?.ChestItem?.map((a) => (
@@ -39,7 +39,7 @@ export default BuyBag;
 
 const Items = ({ url, Bag, Icon, Type, price, usPrice, listItem }) => {
   return (
-    <div className="row">
+    <div data-aos="fade-up" data-aos-delay="400" className="row">
       <div className="col-md-6 left align-items-center">
         <figure>
           <Image src={Bag} />

@@ -56,6 +56,11 @@
             figure {
                 img {
                     width: 18.75em;
+                    transition: 0.3s ease;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
                 }
             }
 
@@ -68,25 +73,25 @@
                 .chest-title {
                     margin-left: 0.6em;
 
-                    span{
+                    span {
                         font-size: 2.25em;
                     }
                 }
             }
 
-            .price{
+            .price {
                 font-size: 1.1em;
                 color: #777d94;
 
-                .gamePrice{
+                .gamePrice {
                     font-size: 1.5em;
                     font-weight: 600;
                     color: $white;
                 }
 
-                .learnMore{
-                    span{
-                        img{
+                .learnMore {
+                    span {
+                        img {
                             width: 10px;
                             height: 10px;
                         }
@@ -100,7 +105,11 @@
             background-image: $bg-color;
             color: $white;
             padding: 0.4em 2.7em;
+            transition: 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
         }
     }
-
 }

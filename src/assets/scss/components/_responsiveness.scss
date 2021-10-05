@@ -245,6 +245,14 @@
             }
         }
     }
+
+    .about .about-hero .bg-img{
+        height: 100% !important;
+    }
+
+    .faq .heading{
+        font-size: 2.25em !important;
+    }
 }
 
 @include max-break-point(wide-screen) {

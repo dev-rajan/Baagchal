@@ -41,8 +41,8 @@ const Characters = () => {
     <section className="characters-section">
       <div className="contents d-flex justify-content-center">
         <div className="wrapper container-fluid">
-          <h3 className="heading">{Items?.heading}</h3>
-          <div className="title">
+          <h3 data-aos="fade-up" data-aos-delay="300" className="heading">{Items?.heading}</h3>
+          <div data-aos="fade-up" data-aos-delay="400" className="title">
             <span className="text-uppercase">{Items?.title}</span>
           </div>
           <div className="row mt-5">
@@ -64,7 +64,7 @@ export default Characters;
 
 const Player = ({ url, image, player_name, player_type }) => {
   return (
-    <div className="item">
+    <div data-aos="fade-up" data-aos-delay="500" className="item">
       <Link href={url}>
         <a>
           <div className="image">
