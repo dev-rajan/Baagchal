@@ -25,28 +25,20 @@ const About = () => {
           <div className="bg-img"></div>
           <div className="contents d-flex align-items-center justify-content-center">
             <div className="wrapper container">
-              <div data-aos="fade-up" data-aos-delay="300" className="title">
+              <div className="title">
                 <span className="text-uppercase">{Items?.title}</span>
               </div>
-              <p
-                data-aos="fade-up"
-                data-aos-delay="400"
-                dangerouslySetInnerHTML={{ __html: Items?.description }}
-              />
+              <p dangerouslySetInnerHTML={{ __html: Items?.description }} />
             </div>
           </div>
         </div>
         {/* Roadmap */}
         <div className="roadmap">
           <div className="wrapper container">
-            <div
-              data-aos="fade-up"
-              data-aos-delay="300"
-              className="title text-center"
-            >
+            <div className="title text-center">
               <span className="text-uppercase">{Items?.roadmap?.title}</span>
             </div>
-            <div data-aos="fade-up" data-aos-delay="300" className="tasks">
+            <div className="tasks">
               {Items?.roadmap?.info?.map((a) => (
                 <RoadMap key={a.id} {...a} lists={a.lists} Rect={Rect} />
               ))}

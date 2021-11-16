@@ -7,8 +7,8 @@ const Discover = () => {
     <section className="discover-section">
       <div className="contents d-flex justify-content-center">
         <div className="wrapper container">
-          <h3 data-aos="fade-up" data-aos-delay="300" className="heading">{Items?.heading}</h3>
-          <div data-aos="fade-up" data-aos-delay="400" className="title">
+          <h3 className="heading">{Items?.heading}</h3>
+          <div className="title">
             <span className="text-uppercase">{Items?.title}</span>
           </div>
           <div className="row mt-5">
@@ -26,7 +26,7 @@ export default Discover;
 
 const NewsItem = ({ url, image, news_title }) => {
   return (
-    <div data-aos="fade-up" data-aos-delay="500" className="col-md-4 mt-3 mt-md-0">
+    <div className="col-md-4 mt-3 mt-md-0">
       <div className="news">
         <Link href={url}>
           <a>

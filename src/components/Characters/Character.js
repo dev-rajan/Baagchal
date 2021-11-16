@@ -105,7 +105,7 @@ export default Character;
 
 const Player_desc = ({ SingleImage, TypeIco, type, title, description }) => {
   return (
-    <div data-aos="fade-up" data-aos-delay="300" className="row">
+    <div className="row">
       <div className="col-md-5">
         <div className="image">
           <figure>

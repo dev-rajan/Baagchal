@@ -36,9 +36,9 @@
         .heading {
             font-size: 1.625em;
             line-height: 0.438em;
-            color: #F35629;
+            color: $primary-color;
             font-weight: 400;
-            text-shadow: 0.5px 0.5px #f35629;
+            text-shadow: 0.5px 0.5px $primary-color;
         }
 
         .title {
@@ -49,7 +49,7 @@
             }
         }
 
-        .btn{
+        .btn {
             font-size: 1.25em;
             color: #777d94;
             border: 1px solid #777d94;
@@ -58,9 +58,9 @@
             margin-top: 1.5em;
             transition: 0.2s ease;
 
-            &:hover{
-                background-color: #f35629;
-                border: 1px solid #f35629;
+            &:hover {
+                background-color: $primary-color;
+                border: 1px solid $primary-color;
                 color: $white;
             }
         }

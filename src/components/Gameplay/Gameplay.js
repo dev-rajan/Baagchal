@@ -23,13 +23,13 @@ const Gameplay = () => {
           <div className="bg-img"></div>
           <div className="contents d-flex align-items-center justify-content-center">
             <div className="wrapper container">
-              <div data-aos="fade-up" data-aos-delay="300" className="heading">
+              <div className="heading">
                 <span>{Items?.heading}</span>
               </div>
-              <div data-aos="fade-up" data-aos-delay="400" className="title">
+              <div className="title">
                 <span className="text-uppercase">{Items?.title}</span>
               </div>
-              <p data-aos="fade-up" data-aos-delay="500" className="description text-light">{Items?.description}</p>
+              <p className="description text-light">{Items?.description}</p>
             </div>
           </div>
         </div>
@@ -52,7 +52,7 @@ export default Gameplay;
 
 const GameInfo = ({ title, news_title }) => {
   return (
-    <div data-aos="fade-up" data-aos-delay="300" className="row">
+    <div className="row">
       <div className="col-md-5">
         <div className="title">
           <span className="text-uppercase">{title}</span>

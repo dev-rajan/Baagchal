@@ -15,10 +15,47 @@
                 position: relative;
             }
 
+            .slick-prev {
+                background-image: url('../../images/leftarrow.svg');
+                width: 90px;
+                height: 90px;
+                background-size: contain;
+                opacity: 0.1;
+                z-index: 1;
+                transition: 0.2s ease;
+
+                &:hover {
+                    background-image: url('../../images/leftarrow.svg') !important;
+                    opacity: 1;
+                }
+
+                &::before {
+                    content: '';
+                }
+            }
+
+            .slick-next {
+                background-image: url('../../images/rightarrow.svg');
+                width: 90px;
+                height: 90px;
+                background-size: contain;
+                opacity: 0.1;
+                transition: 0.2s ease;
+
+                &:hover {
+                    background-image: url('../../images/rightarrow.svg') !important;
+                    opacity: 1;
+                }
+
+                &::before {
+                    content: '';
+                }
+            }
+
             .owl-stage-outer {
                 height: 35em;
 
-                &::before {                   
+                &::before {
                     background: linear-gradient(94.71deg, #141829 39.64%, rgba(20, 24, 41, 0) 88.87%);
                     transform: matrix(-1, 0, 0, 1, 0, 0);
                     content: '';
@@ -29,6 +66,7 @@
                     height: 18em;
                     width: 9em;
                 }
+
                 &::after {
                     background-image: linear-gradient(94.71deg, #141829 39.64%, rgba(20, 24, 41, 0) 88.87%);
                     content: '';
@@ -100,7 +138,7 @@
         .heading {
             font-size: 1.625em;
             line-height: 0.438em;
-            color: #F35629;
+            color: $primary-color;
             font-weight: 400;
         }
 

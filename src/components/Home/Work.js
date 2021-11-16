@@ -6,8 +6,8 @@ const Work = () => {
     <section className="work-section">
       <div className="contents d-flex justify-content-center">
         <div className="wrapper container">
-          <h3 data-aos="fade-up" data-aos-delay="300" className="heading">{Items?.heading}</h3>
-          <div data-aos="fade-up" data-aos-delay="400" className="title">
+          <h3 className="heading">{Items?.heading}</h3>
+          <div className="title">
             <span className="text-uppercase">{Items?.title}</span>
           </div>
           <div className="grid">
@@ -25,7 +25,7 @@ export default Work;
 
 const Boxes = ({ image, question, description }) => {
   return (
-    <div className="grid-item" data-aos="fade-up" data-aos-delay="500">
+    <div className="grid-item">
       <div className="box">
         <figure className="m-0">
           <Image src={image.default} title="console" alt="console"></Image>
@@ -33,7 +33,10 @@ const Boxes = ({ image, question, description }) => {
         <div className="question">
           <span className="text-uppercase">{question}</span>
         </div>
-        <p className="answer" dangerouslySetInnerHTML={{ __html: description }} />
+        <p
+          className="answer"
+          dangerouslySetInnerHTML={{ __html: description }}
+        />
       </div>
     </div>
   );

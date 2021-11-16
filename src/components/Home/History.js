@@ -6,13 +6,13 @@ const History = () => {
     <section className="history-section">
       <div className="contents d-flex align-items-end justify-content-center">
         <div className="wrapper container">
-          <h3 data-aos="fade-up" data-aos-delay="300" className="heading">
+          <h3 className="heading">
             {Items?.heading}
           </h3>
-          <div data-aos="fade-up" data-aos-delay="400" className="title">
+          <div className="title">
             <span className="text-uppercase">{Items?.title}</span>
           </div>
-          <div data-aos="fade-up" data-aos-delay="500">
+          <div>
             <p className="description">{Items?.description}</p>
             <Link href="/about">
               <a className="learnmore btn">Learn More</a>
